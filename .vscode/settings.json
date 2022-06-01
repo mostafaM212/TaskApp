@@ -1,0 +1,9 @@
+{
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+    "editor.tokenColorCustomizations": {
+        "comments": "#FF0000",
+        "functions": "#00ff73",
+        "variables": "#0099ffa6"
+    }
+}
