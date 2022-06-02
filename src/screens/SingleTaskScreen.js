@@ -24,7 +24,7 @@ export const deleteTask = async (id, dispatch, tasks, navigation) => {
   const newTasks = tasks.filter(task => {
     return task.id !== id;
   });
-  console.log(newTasks);
+  console.log(newTasks , id);
 
   try {
     await localeStorage.setItem('tasks', JSON.stringify(newTasks)).then(() => {
@@ -66,7 +66,7 @@ const SingleTaskScreen = ({navigation, route}) => {
               {
                 text: 'ok',
                 onPress: () => {
-                  deleteTask(task.id, dispatch, tasks, navigation);
+                  deleteTask(route.params.taskId, dispatch, tasks, navigation);
                 },
               },
               {
